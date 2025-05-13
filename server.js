@@ -6,7 +6,7 @@ import morgan from 'morgan';
 import 'dotenv/config';
 const app = express();
 
-app.use(cors());
+app.use(cors({origin: '*'}));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use('/api/v1', mainRouter);
